@@ -1,12 +1,13 @@
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="home-view">
+    <div>
+      <Sidenav />
+    </div>
+  </div>
 </template>
 
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-import { reactive } from 'vue'
+import Sidenav from '../components/SidenavMain.vue'
+//import { reactive } from 'vue'
 
-const state = reactive({ count: 0 })
 </script>

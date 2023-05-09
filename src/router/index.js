@@ -1,23 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import HomeView from '../views/HomeView.vue'
+import MainTemplate from '../template/MainTemplate.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: '/login',
+      component: () => import('@/page/Login')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
+      path: '/',
+      name: 'home',
+      component: MainTemplate,
+      children: [
+        {
+          path: '/teleinterconsulta',
+          name: 'teleinterconsulta',
+          component: () => import('../views/AboutView.vue')
+        }
+      ],
+    },
   ]
 })
+
+// router.beforeEach((to, from, next) => {
+// 	document.body.classList.add('app-loading')
+// 	const token = auth.getToken()
+// 	if (to.path !== '/login' && !token) {
+// 		setTimeout(() => next('/login'), 10)
+// 	} else if (to.path === '/login' && token) {
+// 		setTimeout(() => next('/'), 10)
+// 	} else {
+// 		setTimeout(() => next(), 10)
+// 	}
+// })
 
 export default router
