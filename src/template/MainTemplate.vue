@@ -2,7 +2,7 @@
 <template>
   <div class="template-wrapper template-2">
     <div class="template-inner">
-      <app-template-sidenav />
+      <SidenavMain />
 
       <div class="template-container">
         <app-template-navbar />
@@ -18,7 +18,8 @@
   </div>
 </template>
 <script setup>
-import { ref, onUpdated } from 'vue'
+import SidenavMain from '../components/SidenavMain.vue';
+// import { ref, onUpdated } from 'vue'
 
 
 </script>
