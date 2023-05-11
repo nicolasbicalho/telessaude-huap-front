@@ -1,26 +1,28 @@
-
-<template>
-  <div id="app">
-    <router-view/>
-  </div>
-</template>
-
 <script>
   export default {
     name: 'app',
     metaInfo: {
       title: 'Index',
-      titleTemplate: '%s'
-	},
-}
+      titleTemplate: '%s',
+    },
+  };
 </script>
 <script setup>
-import { onUpdated } from 'vue'
+  import { onUpdated } from 'vue';
 
-onUpdated(() => {
-  setTimeout(() => document.body.classList.remove('app-loading'), 1)
-})
+  onUpdated(() => {
+    setTimeout(() => document.body.classList.remove('app-loading'), 1);
+  });
 </script>
 
+<template>
+  <div class="app-container">
+    <router-view />
+  </div>
+</template>
+
 <style scoped>
+  .app-container {
+    height: 100%;
+  }
 </style>
