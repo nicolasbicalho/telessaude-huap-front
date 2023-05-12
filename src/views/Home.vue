@@ -42,11 +42,13 @@ const tableColumns = ref([
 <template>
   <div class="home-container">
     <q-table
-      flat bordered
       title="Consultas"
       :rows="consultationMock"
       :columns="tableColumns"
       row-key="id"
+      class="appointment-table"
+      bordered
+      flat
     />
   </div>
 </template>
@@ -54,6 +56,8 @@ const tableColumns = ref([
 <style scoped>
   .home-container {
     height: 100%;
-    display: flex;
+  }
+  .appointment-table {
+    height: 100%;
   }
 </style>
