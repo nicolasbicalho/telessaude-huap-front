@@ -3,24 +3,22 @@
 </script>
 
 <template>
-  <div class="layout-wrapper">
+  <div class="layout-container">
     <Sidenav />
-    <div class="layout-container">
-        <app-layout-navbar />
-
-        <div class="layout-content">
-          <div class="grow">
-            <router-view />
-          </div>
-        </div>
-      </div>
+    <div class="layout-page-container">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <style scoped>
-  .layout-wrapper {
+  .layout-container {
     height: 100%;
     width: 100%;
     display: flex;
+  }
+
+  .layout-page-container {
+    flex-grow: 1;
   }
 </style>
