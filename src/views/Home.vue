@@ -44,7 +44,7 @@ const tableColumns = ref([
     <q-table
       flat bordered
       title="Consultas"
-      :rows="[consultationMock]"
+      :rows="consultationMock"
       :columns="tableColumns"
       row-key="id"
     />
