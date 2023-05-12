@@ -19,7 +19,12 @@ const router = createRouter({
         {
           path: '/teleinterconsulta',
           name: 'teleinterconsulta',
-          component: () => import('@/views/About.vue'),
+          component: () => import('@/views/Appointments.vue'),
+        },
+        {
+          path: '/novateleinterconsulta',
+          name: 'novateleinterconsulta',
+          component: () => import('@/views/NewAppointment.vue'),
         },
       ],
     },
