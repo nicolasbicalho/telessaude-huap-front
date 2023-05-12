@@ -5,6 +5,8 @@ import App from './App.vue';
 import router from './router';
 import quasarUserOptions from './quasar-user-options';
 
+import "quasar/dist/quasar.sass"
+
 import './assets/main.css';
 
 const app = createApp(App);

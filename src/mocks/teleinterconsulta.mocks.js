@@ -1,4 +1,4 @@
-const doctorsMock = [{
+export const doctorsMock = [{
     name: 'João Silva',
     doctorId: '123456',
     workDays: ['monday', 'wednesday', 'thursday', 'friday', 'saturday'],
@@ -40,12 +40,10 @@ const doctorsMock = [{
     }]
 }];
 
-const jitsiMeetMock = {
-    url: 'http://localhost:8080/meet/1T52QP01B',
+export const consultationMock = {
+    id: '123',
+    jitsiMeetUrl: 'http://localhost:8080/meet/1T52QP01B',
+    doctorName: 'Maria Souza',
+    consultationStartDate: new Date(),
+    consultationFinishDate: null,
 }
-
-
-export default {
-    doctorsMock,
-    jitsiMeetMock,
-};
