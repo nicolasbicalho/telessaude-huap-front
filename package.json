@@ -13,11 +13,11 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^1.4.0",
     "moment": "^2.29.4",
+    "pinia": "^2.1.3",
     "quasar": "^2.0.0",
     "tailwindcss": "^3.3.2",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
