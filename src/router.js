@@ -21,11 +21,18 @@ const router = createRouter({
           path: '/teleinterconsulta',
           name: 'teleinterconsulta',
           component: () => import('@/views/Appointments.vue'),
+          // children: [
+          //   {
+          //     path: '/chamada/:meetId',
+          //     name: 'chamada',
+          //     component: () => import('@/views/AppointmentCall.vue'),
+          //   },
+          // ],
         },
         {
-          path: '/novateleinterconsulta',
-          name: 'novateleinterconsulta',
-          component: () => import('@/views/NewAppointment.vue'),
+          path: '/chamada/:meetId',
+          name: 'chamada',
+          component: () => import('@/views/AppointmentCall.vue'),
         },
       ],
     },

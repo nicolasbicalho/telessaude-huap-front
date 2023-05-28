@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
 import moment from 'moment';
+import CreateAppointmentCard from '../components/CreateAppointmentCard.vue';
 
-const router = useRouter();
+// const router = useRouter();
 
 const tableColumns = ref([
   {
@@ -39,18 +40,27 @@ const tableColumns = ref([
   },
 ]);
 
+const showCard = ref(false);
 const appointments = ref([]);
-function openNewAppointmentPage() {
-  router.push({ name: 'novateleinterconsulta' });
-}
 </script>
 
 <template>
   <div class="page-container">
     <header>
-      <button class="header-button" @click="openNewAppointmentPage">
-        Agendar nova consulta
-      </button>
+      <q-btn label="Criar Consulta" color="primary" @click="showCard = true" />
+      <q-dialog v-model="showCard" persistent>
+        <q-card>
+          <q-card-section class="row items-center q-pb-none">
+            <div class="text-h6">Nova Consulta</div>
+            <q-space />
+            <q-btn icon="close" flat round dense v-close-popup />
+          </q-card-section>
+
+          <q-card-section>
+            <CreateAppointmentCard @hide-modal="showCard = false"/>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
     </header>
     <q-table
       title="Consultas"

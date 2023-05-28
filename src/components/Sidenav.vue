@@ -1,5 +1,6 @@
 <template>
   <aside class="sidenav">
+    <img style="margin-bottom: 32px" src="../assets/logouff_vertical_azul.png" alt="" srcset="">
     <RouterLink to="/" class="sidenav-link">Home</RouterLink>
     <RouterLink to="/teleinterconsulta" class="sidenav-link">Teleinterconsulta</RouterLink>
   </aside>

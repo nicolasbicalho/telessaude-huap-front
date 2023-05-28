@@ -25,9 +25,10 @@ function onLogin() {
             <q-card class="my-card">
                 <q-card-section>
                     <div class="title">
-                        <h3 class="mb-2">
+                        <!-- <h3 class="mb-2">
                             Login
-                        </h3>
+                        </h3> -->
+                        <img class="login-image" src="../assets/logo-uff-branco-fundo-azul.png" alt="" srcset="">
                         <div class="pb-2">
                             <p>
                                 Digite seus dados para entrar
@@ -59,6 +60,7 @@ function onLogin() {
 <style scoped>
     #login {
         height: 100%;
+        background-color: #ccd8db;
     }
 
     .login-wrapper {
@@ -78,6 +80,10 @@ function onLogin() {
 
     .email-input {
         margin-bottom: 8px;
+    }
+
+    .login-image {
+        margin-bottom: 16px;
     }
 
     .login-button {
